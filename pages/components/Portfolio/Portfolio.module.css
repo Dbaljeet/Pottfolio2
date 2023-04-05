@@ -1,0 +1,56 @@
+.ContentScroll {
+  margin: 50px 0;
+  width: 100%;
+  height: auto;
+}
+.Section {
+  padding: 10px 0;
+  width: 100%;
+}
+@media screen and (max-width: 622px) {
+  .Section {
+    outline: 2px solid #b2d1b5;
+  }
+}
+
+.res {
+  display: flex;
+  flex-direction: column;
+}
+
+.IMG {
+  width: 500px;
+  height: 430px;
+  will-change: opacity;
+  z-index: 2;
+  cursor: pointer;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: Spawn 1s;
+  align-self: center;
+}
+.IMG:hover {
+  opacity: 1;
+}
+
+.Figure {
+  align-self: center;
+}
+
+.Amount {
+  display: block;
+  color: #fff;
+}
+
+.SecondaryTitle {
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding: 0px;
+  font-size: 2.5rem;
+}
+
+.wfull {
+  width: 100%;
+  margin: auto;
+}

@@ -1,0 +1,58 @@
+.ContentScroll {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0 100px 0;
+  @media screen and (max-width: 622px) {
+    outline: 2px solid #b2d1b5;
+  }
+}
+
+.SecondaryTitle {
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding: 0px;
+  font-size: 2.5rem;
+}
+
+.ContentContainer {
+  margin: auto;
+  justify-content: space-around;
+  transition: all 2s;
+}
+
+.ContentContainer2 {
+  margin: auto;
+  justify-content: space-around;
+  transition: all 2s;
+  color: #ffffff7c;
+}
+
+.ContentContainer:hover {
+  color: #fff;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.ContentContainer2:hover {
+  color: #fff;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.IMG {
+  padding: 30px 0;
+  width: 130px;
+}
+.IMG2 {
+  padding: 30px 0;
+  width: 100px;
+}

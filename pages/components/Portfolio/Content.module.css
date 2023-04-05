@@ -1,0 +1,86 @@
+.ContainerContent {
+  font-family: 'Noto Sans', sans-serif;
+  border-top: 1px solid #000;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  width: 100%;
+  height: 100%;
+  gap: 40px;
+  padding: 15px 0;
+
+  justify-items: center;
+}
+@media screen and (max-width: 740px) {
+  .ContainerContent {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.Tittle {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.IMG {
+  max-width: 300px;
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .IMG {
+    max-width: 250px;
+  }
+}
+
+.Deploy {
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  font-weight: bold;
+  color: #b8b6b6;
+  transition: color 1s;
+}
+.Deploy:hover {
+  color: #fff;
+}
+.Deploy > label {
+  cursor: pointer;
+}
+
+.Repo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #b8b6b6;
+  transition: color 1s;
+}
+.Repo:hover {
+  color: #fff;
+}
+.Repo:hover > label {
+  cursor: pointer;
+}
+
+.INFO {
+  margin-bottom: 10px;
+}
+
+.ContentInfo {
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 622px) {
+  .ContentInfo {
+    font-size: 1.5rem;
+  }
+}
