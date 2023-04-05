@@ -16,21 +16,22 @@
 .res {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .IMG {
-  width: 500px;
+  width: 100%;
   height: 430px;
-  will-change: opacity;
   z-index: 2;
   cursor: pointer;
-  object-fit: cover;
-  opacity: 0.7;
+  object-fit: contain;
   transition: Spawn 1s;
   align-self: center;
 }
-.IMG:hover {
-  opacity: 1;
+@media screen and (min-width: 622px) {
+  .IMG {
+    width: 500px;
+  }
 }
 
 .Figure {
@@ -51,6 +52,7 @@
 }
 
 .wfull {
+  padding: 50px 0;
   width: 100%;
   margin: auto;
 }

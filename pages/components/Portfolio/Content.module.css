@@ -8,7 +8,6 @@
   height: 100%;
   gap: 40px;
   padding: 15px 0;
-
   justify-items: center;
 }
 @media screen and (max-width: 740px) {
@@ -16,11 +15,14 @@
     padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     max-width: 100%;
-    max-height: 100%;
+  }
+
+  .IMG {
+    max-width: 250px;
   }
 }
 
@@ -32,11 +34,6 @@
 .IMG {
   max-width: 300px;
   align-self: center;
-}
-@media screen and (max-width: 768px) {
-  .IMG {
-    max-width: 250px;
-  }
 }
 
 .Deploy {
@@ -74,6 +71,7 @@
 
 .INFO {
   margin-bottom: 10px;
+  font-size: 25px;
 }
 
 .ContentInfo {

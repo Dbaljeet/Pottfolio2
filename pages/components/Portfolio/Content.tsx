@@ -30,17 +30,21 @@ const ContentPortfolio: FC<Props> = ({
           <h3 className={styles.INFO}>¿De qué trata?</h3>
           <p className={styles.ContentInfo}>{Info}</p>
         </div>
-        <a className={styles.Deploy} href={deploy} target="_blank">
-          <label>
-            {Name === 'PYTYM' ? 'Aún no desplegado' : 'visitar sitio web'}
-          </label>
-        </a>
+        {deploy !== '' ? (
+          <a className={styles.Deploy} href={deploy} target="_blank">
+            <label>
+              {Name === 'PYTYM' ? 'Aún no desplegado' : 'visitar sitio web'}
+            </label>
+          </a>
+        ) : (
+          <p className={styles.ContentInfo}>No desplegado</p>
+        )}
         {Name === 'Cupcake' && (
           <a
             target="_blank"
             href="https://www.youtube.com/watch?v=EoxCh-ISKcc&list=PL5P4yyutUIHGtSQPMFrv98bJdm1JEUrnx&index=1"
           >
-            Ver cómo funciona
+            <p className={styles.ContentInfo}>Ver cómo funciona</p>
           </a>
         )}
       </div>

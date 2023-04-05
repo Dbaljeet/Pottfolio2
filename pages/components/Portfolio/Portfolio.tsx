@@ -7,7 +7,6 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Autoplay, Keyboard, Navigation, Pagination } from 'swiper'
-import Image from 'next/image'
 import { ModalPortalPortfolio } from '../Modals/PortfolioModal'
 import ContentPortfolio from './Content'
 
@@ -30,7 +29,7 @@ const Portfolio = () => {
     info: [
       'Proyecto donde se pueden cargar datos de una cuenta bancaria, más información en github',
       'Es un proyecto donde se pueden visualizar gifs',
-      'Ecommerce donde se registran las ventas, se tienen roles de usuario, etc.',
+      'Ecommerce donde se registran las ventas, se manejan roles de usuario, permite inicios de sesión con google o sistema personalizado, etc.',
     ],
   }
 
@@ -44,9 +43,16 @@ const Portfolio = () => {
     return () => window.removeEventListener('resize', windowSize)
   }, [])
 
+  useEffect(() => {
+    const scroll = document.getElementById('scroll')
+    if (scroll == null) return
+    showModal
+      ? (scroll.style.overflow = 'hidden')
+      : (scroll.style.overflow = 'auto')
+  }, [showModal])
+
   const handleClose = () => {
     setShowModal(false)
-    document.body.style.overflow = 'auto'
   }
 
   return (
@@ -83,9 +89,7 @@ const Portfolio = () => {
                   }}
                 >
                   <div className={styles.res}>
-                    <Image
-                      width={'1080'}
-                      height={'1080'}
+                    <img
                       alt={InfoRep.info[index]}
                       className={styles.IMG}
                       src={
