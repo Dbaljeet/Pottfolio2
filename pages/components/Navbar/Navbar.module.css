@@ -1,0 +1,190 @@
+.Nav {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  height: auto;
+  width: 100%;
+  min-width: 200px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #c0c0c0;
+  background: rgba(224, 231, 221, 0.212);
+}
+@media screen and (max-width: 622px) {
+  .Nav {
+    font-size: 2.5rem;
+    opacity: 1;
+    background: rgba(22, 22, 22, 0.945);
+  }
+  .Nav.true {
+    background-color: '#000';
+  }
+}
+@media screen and (min-width: 622px) {
+  .Nav {
+    backdrop-filter: blur(20px);
+  }
+}
+
+.Nav::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  z-index: -1;
+  transition: transform 0.8s ease;
+}
+
+.Nav:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.Lista {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Hamburger {
+  z-index: 3;
+  display: none;
+}
+@media screen and (max-width: 622px) {
+  .Hamburger {
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    margin-top: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: inline-block;
+    backdrop-filter: blur(3px);
+  }
+  .Hamburger span {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    width: 100%;
+    height: 4px;
+    transition-duration: 500ms;
+  }
+
+  .Hamburger span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+  }
+  .Hamburger span:nth-child(2) {
+    top: 13px;
+    left: 0px;
+    opacity: 1;
+  }
+  .Hamburger span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+  }
+  .Hamburger:not(#open):hover span:nth-child(1) {
+    transform: scaleX(0.8);
+  }
+  .Hamburger:not(#open):hover span:nth-child(2) {
+    transform: scaleX(0.5);
+  }
+  .Hamburger:not(#open):hover span:nth-child(3) {
+    transform: scaleX(0.8);
+  }
+  .Hamburger#open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .Hamburger#open span:nth-child(2) {
+    opacity: 0;
+  }
+  .Hamburger#open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 13px;
+  }
+}
+
+.Links {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  line-height: 42px;
+  border: none;
+  background: transparent;
+}
+
+.Links.active {
+  color: #f0094a;
+}
+
+.Links.active:hover {
+  color: #120733;
+  background-color: #fff;
+}
+@media screen and (max-width: 622px) {
+  .Links {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 622px) {
+  .Links {
+    height: 40px;
+    font-size: 2rem;
+    margin: 40px;
+  }
+}
+
+.Links:hover {
+  color: #f0094a;
+  background: transparent;
+  box-shadow: none;
+}
+.Links:before,
+.Links:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #f0094a;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+.Links:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.Links:hover:before,
+.Links:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}

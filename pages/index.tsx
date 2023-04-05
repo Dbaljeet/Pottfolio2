@@ -6,6 +6,7 @@ import CV from './components/CV'
 import Portfolio from './components/Portfolio/Portfolio'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
+import Navbar from './components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main} id="modal-root">
+        <Navbar />
         <h1 className={styles.PrincipalTitle}>Angelo Berríos Pinto</h1>
         <About></About>
         <CV></CV>
