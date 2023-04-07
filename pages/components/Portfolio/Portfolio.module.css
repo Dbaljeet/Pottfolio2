@@ -56,3 +56,9 @@
   width: 100%;
   margin: auto;
 }
+
+@media screen and (min-width: 1000px) {
+  .wfull {
+    max-width: 800px;
+  }
+}

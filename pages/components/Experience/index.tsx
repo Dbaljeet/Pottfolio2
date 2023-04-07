@@ -50,7 +50,7 @@ const Experience = () => {
             <b>programación funcional</b> )
           </li>
           <li className={styles.Element}>
-            <b>Aplicaciones móviles</b> con React native ( proyecto en proceso )
+            <b>Aplicaciones móviles</b> con React native
           </li>
         </ul>
       </section>

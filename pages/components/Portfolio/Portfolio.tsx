@@ -23,8 +23,8 @@ const Portfolio = () => {
       'https://github.com/Dbaljeet/GiphyAllWeb',
       'https://github.com/Dbaljeet/cupcake',
     ],
-    images: ['/PYTYM.webp', '/GiphyAll.jpg', '/cupcakesu.png'],
-    images2: ['/PYTYM2.jpg', '/GiphyAll.jpg', '/cupcakesu.png'],
+    images: ['/PYTYM.webp', '/GiphyAll.jpg', '/cupcakesu.webp'],
+    images2: ['/PYTYM2.jpg', '/GiphyAll.jpg', '/cupcakesu.webp'],
     deploy: ['', 'https://giphy-all-web.vercel.app', ''],
     info: [
       'Proyecto donde se pueden cargar datos de una cuenta bancaria, más información en github',
